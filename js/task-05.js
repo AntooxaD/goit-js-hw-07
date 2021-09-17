@@ -1,6 +1,6 @@
 
-let input = document.getElementById("name-input");
-let nameOutput = document.getElementById("name-output");
+let input = document.querySelector("#name-input");
+let nameOutput = document.querySelector("#name-output");
 
 input.oninput = function () {
     if (input.value === '') {
