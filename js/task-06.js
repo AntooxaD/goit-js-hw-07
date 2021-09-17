@@ -1,6 +1,6 @@
 let inputEl = document.querySelector('#validation-input');
 
-let inputLength = inputEl.getAttribute("data-length");
+let inputLength = inputEl.dataset.length;
 
 
 inputEl.oninput = function () {
