@@ -24,12 +24,12 @@
 
 let inputEl = document.querySelector('#validation-input');
 
-let inputLength = inputEl.dataset.length;
 
+inputEl.addEventListener('input', inputChange)
+function inputChange(el) {
 
-inputEl.oninput = function () {
-
-  if (inputEl.value.length === +inputLength) {
+  if (el.currentTarget.getAttribute("data-length") == el.currentTarget.value.length
+  ) {
     inputEl.classList.add('valid');
     inputEl.classList.remove('invalid');
   } else {

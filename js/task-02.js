@@ -25,12 +25,13 @@ const ingredients = [
 ]
 const ul = document.getElementById("ingredients");
 
-const ingredient = ingredients.reduce((element, index) => element + `<li>${index}</li>`, "")
-
-ul.innerHTML = ingredient;
-
-console.log(ingredient)
+ingredients.forEach(el => { ul.insertAdjacentHTML(`beforebegin`, `<li>${el}</li>`) })
 
 
+// const ingredient = ingredients.reduce((element, index) => element + `<li>${index}</li>`, "")
+
+// ul.innerHTML = ingredient;
+
+// console.log(ingredient)
   
   
