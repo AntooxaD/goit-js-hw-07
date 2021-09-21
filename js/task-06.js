@@ -23,7 +23,7 @@
 // }
 
 let inputEl = document.querySelector('#validation-input');
-
+  
 
 inputEl.addEventListener('input', inputChange)
 function inputChange(el) {
