@@ -47,8 +47,6 @@ const images = [
 //         `list-style-type:none; 
 //         display: flex;
 //         justify-content: space-around;`;
-    
-//     // gallery.setAttribute("style", "list-style-type:none; display: flex; justify-content: space-around;");
 // });
 const gallery = document.querySelector('#gallery');
 
