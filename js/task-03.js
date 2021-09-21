@@ -37,18 +37,25 @@ const images = [
   },
 ];
 
+// const gallery = document.querySelector('#gallery');
+// images.forEach(image => {
+//     gallery.insertAdjacentHTML(
+//         'afterbegin',
+//         `<li><img src = "${image.url}" alt = "${image.alt}"  width = "248px" height = "164px" /></li>`,
+//     );
+//     document.querySelector('#gallery').style =
+//         `list-style-type:none; 
+//         display: flex;
+//         justify-content: space-around;`;
+    
+//     // gallery.setAttribute("style", "list-style-type:none; display: flex; justify-content: space-around;");
+// });
 const gallery = document.querySelector('#gallery');
-images.forEach(image => {
-    gallery.insertAdjacentHTML(
-        'afterbegin',
-        `<li><img src = "${image.url}" alt = "${image.alt}"  width = "248px" height = "164px" /></li>`,
-    );
-    document.querySelector('#gallery').style =
-        `list-style-type:none; 
-        display: flex;
-        justify-content: space-around;`;
-    
-    // gallery.setAttribute("style", "list-style-type:none; display: flex; justify-content: space-around;");
-    
-    console.log(image)
-});
+
+gallery.setAttribute("style", "list-style-type:none; display: flex; justify-content: space-around;");
+const markup = images
+  .map(image => { return `<li><img src = "${image.url}" alt = "${image.alt}"  width = "248px" height = "164px" /></li>` })
+  .join('')
+        
+gallery.insertAdjacentHTML('afterbegin', markup);
+  

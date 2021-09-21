@@ -25,7 +25,7 @@ const ingredients = [
 ]
 const ul = document.getElementById("ingredients");
 
-ingredients.forEach(el => { ul.insertAdjacentHTML(`beforebegin`, `<li>${el}</li>`) })
+// ingredients.forEach(el => { return ul.insertAdjacentHTML(`beforebegin`, `<li>${el}</li>`) } )
 
 
 // const ingredient = ingredients.reduce((element, index) => element + `<li>${index}</li>`, "")
@@ -35,3 +35,9 @@ ingredients.forEach(el => { ul.insertAdjacentHTML(`beforebegin`, `<li>${el}</li>
 // console.log(ingredient)
   
   
+const markup = ingredients
+  
+  .map(el => { return `<li>${el}</li>` })
+  .join('')
+
+ul.insertAdjacentHTML('beforebegin', markup)
